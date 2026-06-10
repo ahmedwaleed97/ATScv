@@ -1,0 +1,30 @@
+ATScv — Requirements
+====================
+
+Runtime
+-------
+Node.js  >= 18
+npm      >= 9
+
+npm packages (installed via `npm install`)
+------------------------------------------
+react            ^18.3.1   — UI framework
+react-dom        ^18.3.1   — DOM renderer
+lucide-react     ^0.511.0  — icon library
+mammoth          ^1.8.0    — Word (.docx) text extraction
+
+Dev dependencies
+----------------
+vite             ^6.3.5    — build tool & dev server
+@vitejs/plugin-react ^4.3.4 — JSX transform for Vite
+
+External (loaded at runtime, no install needed)
+-----------------------------------------------
+pdf.js 3.11  — loaded from CDN for in-browser PDF text extraction
+Google Fonts — Inter + Fraunces, loaded from fonts.googleapis.com
+
+AI (optional)
+-------------
+Gemini API key (free tier available at aistudio.google.com/apikey)
+Set VITE_GEMINI_API_KEY in .env to enable AI-powered CV review.
+Without a key the app uses a built-in offline rules-based analyzer.
